@@ -10,6 +10,11 @@
 		DA13E07624E72643004A8111 /* WeatherKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA13E06C24E72643004A8111 /* WeatherKit.framework */; };
 		DA13E07B24E72643004A8111 /* WeatherKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E07A24E72643004A8111 /* WeatherKitTests.swift */; };
 		DA13E07D24E72643004A8111 /* WeatherKit.h in Headers */ = {isa = PBXBuildFile; fileRef = DA13E06F24E72643004A8111 /* WeatherKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA13E09524E72643004A8111 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E09424E72643004A8111 /* HTTPMethod.swift */; };
+		DA13E09724E72643004A8111 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E09624E72643004A8111 /* NetworkManager.swift */; };
+		DA13E09924E72643004A8111 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E09824E72643004A8111 /* NetworkError.swift */; };
+		DA13E09B24E72643004A8111 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E09A24E72643004A8111 /* Resource.swift */; };
+		DA13E09D24E72643004A8111 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E09C24E72643004A8111 /* NetworkManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +34,11 @@
 		DA13E07524E72643004A8111 /* WeatherKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA13E07A24E72643004A8111 /* WeatherKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherKitTests.swift; sourceTree = "<group>"; };
 		DA13E07C24E72643004A8111 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA13E09424E72643004A8111 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		DA13E09624E72643004A8111 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		DA13E09824E72643004A8111 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		DA13E09A24E72643004A8111 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		DA13E09C24E72643004A8111 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +81,7 @@
 		DA13E06E24E72643004A8111 /* WeatherKit */ = {
 			isa = PBXGroup;
 			children = (
+				DA13E09324E72643004A8111 /* api */,
 				DA13E06F24E72643004A8111 /* WeatherKit.h */,
 				DA13E07024E72643004A8111 /* Info.plist */,
 			);
@@ -80,10 +91,22 @@
 		DA13E07924E72643004A8111 /* WeatherKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				DA13E09C24E72643004A8111 /* NetworkManagerTests.swift */,
 				DA13E07A24E72643004A8111 /* WeatherKitTests.swift */,
 				DA13E07C24E72643004A8111 /* Info.plist */,
 			);
 			path = WeatherKitTests;
+			sourceTree = "<group>";
+		};
+		DA13E09324E72643004A8111 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				DA13E09424E72643004A8111 /* HTTPMethod.swift */,
+				DA13E09624E72643004A8111 /* NetworkManager.swift */,
+				DA13E09824E72643004A8111 /* NetworkError.swift */,
+				DA13E09A24E72643004A8111 /* Resource.swift */,
+			);
+			path = api;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +171,7 @@
 				TargetAttributes = {
 					DA13E06B24E72643004A8111 = {
 						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
 					};
 					DA13E07424E72643004A8111 = {
 						CreatedOnToolsVersion = 11.0;
@@ -195,6 +219,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA13E09924E72643004A8111 /* NetworkError.swift in Sources */,
+				DA13E09B24E72643004A8111 /* Resource.swift in Sources */,
+				DA13E09524E72643004A8111 /* HTTPMethod.swift in Sources */,
+				DA13E09724E72643004A8111 /* NetworkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA13E09D24E72643004A8111 /* NetworkManagerTests.swift in Sources */,
 				DA13E07B24E72643004A8111 /* WeatherKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,6 +369,7 @@
 		DA13E08124E72643004A8111 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 3VYD5CW8W2;
@@ -356,6 +386,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lanouari.WeatherKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +395,7 @@
 		DA13E08224E72643004A8111 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 3VYD5CW8W2;
@@ -388,6 +420,7 @@
 		DA13E08424E72643004A8111 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3VYD5CW8W2;
 				INFOPLIST_FILE = WeatherKitTests/Info.plist;
@@ -406,6 +439,7 @@
 		DA13E08524E72643004A8111 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3VYD5CW8W2;
 				INFOPLIST_FILE = WeatherKitTests/Info.plist;
