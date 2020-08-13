@@ -15,6 +15,11 @@
 		DA13E09924E72643004A8111 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E09824E72643004A8111 /* NetworkError.swift */; };
 		DA13E09B24E72643004A8111 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E09A24E72643004A8111 /* Resource.swift */; };
 		DA13E09D24E72643004A8111 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E09C24E72643004A8111 /* NetworkManagerTests.swift */; };
+		DA13E09F24E72643004A8111 /* CityApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E09E24E72643004A8111 /* CityApi.swift */; };
+		DA13E0A224E72643004A8111 /* CityMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E0A124E72643004A8111 /* CityMapper.swift */; };
+		DA13E0A424E72643004A8111 /* CurrentMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E0A324E72643004A8111 /* CurrentMapper.swift */; };
+		DA13E0A624E72643004A8111 /* WeatherMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E0A524E72643004A8111 /* WeatherMapper.swift */; };
+		DA13E0A824E72643004A8111 /* CityApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E0A724E72643004A8111 /* CityApiTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +44,11 @@
 		DA13E09824E72643004A8111 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		DA13E09A24E72643004A8111 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		DA13E09C24E72643004A8111 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
+		DA13E09E24E72643004A8111 /* CityApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityApi.swift; sourceTree = "<group>"; };
+		DA13E0A124E72643004A8111 /* CityMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityMapper.swift; sourceTree = "<group>"; };
+		DA13E0A324E72643004A8111 /* CurrentMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentMapper.swift; sourceTree = "<group>"; };
+		DA13E0A524E72643004A8111 /* WeatherMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherMapper.swift; sourceTree = "<group>"; };
+		DA13E0A724E72643004A8111 /* CityApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityApiTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +91,7 @@
 		DA13E06E24E72643004A8111 /* WeatherKit */ = {
 			isa = PBXGroup;
 			children = (
+				DA13E0A024E72643004A8111 /* mapper */,
 				DA13E09324E72643004A8111 /* api */,
 				DA13E06F24E72643004A8111 /* WeatherKit.h */,
 				DA13E07024E72643004A8111 /* Info.plist */,
@@ -91,6 +102,7 @@
 		DA13E07924E72643004A8111 /* WeatherKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				DA13E0A724E72643004A8111 /* CityApiTests.swift */,
 				DA13E09C24E72643004A8111 /* NetworkManagerTests.swift */,
 				DA13E07A24E72643004A8111 /* WeatherKitTests.swift */,
 				DA13E07C24E72643004A8111 /* Info.plist */,
@@ -105,8 +117,19 @@
 				DA13E09624E72643004A8111 /* NetworkManager.swift */,
 				DA13E09824E72643004A8111 /* NetworkError.swift */,
 				DA13E09A24E72643004A8111 /* Resource.swift */,
+				DA13E09E24E72643004A8111 /* CityApi.swift */,
 			);
 			path = api;
+			sourceTree = "<group>";
+		};
+		DA13E0A024E72643004A8111 /* mapper */ = {
+			isa = PBXGroup;
+			children = (
+				DA13E0A124E72643004A8111 /* CityMapper.swift */,
+				DA13E0A324E72643004A8111 /* CurrentMapper.swift */,
+				DA13E0A524E72643004A8111 /* WeatherMapper.swift */,
+			);
+			path = mapper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +245,10 @@
 				DA13E09924E72643004A8111 /* NetworkError.swift in Sources */,
 				DA13E09B24E72643004A8111 /* Resource.swift in Sources */,
 				DA13E09524E72643004A8111 /* HTTPMethod.swift in Sources */,
+				DA13E0A624E72643004A8111 /* WeatherMapper.swift in Sources */,
+				DA13E0A424E72643004A8111 /* CurrentMapper.swift in Sources */,
+				DA13E0A224E72643004A8111 /* CityMapper.swift in Sources */,
+				DA13E09F24E72643004A8111 /* CityApi.swift in Sources */,
 				DA13E09724E72643004A8111 /* NetworkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,6 +259,7 @@
 			files = (
 				DA13E09D24E72643004A8111 /* NetworkManagerTests.swift in Sources */,
 				DA13E07B24E72643004A8111 /* WeatherKitTests.swift in Sources */,
+				DA13E0A824E72643004A8111 /* CityApiTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
