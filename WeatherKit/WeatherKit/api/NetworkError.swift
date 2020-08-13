@@ -9,7 +9,7 @@
 import Foundation
 
 /// The NetworkError Parser for HTTP errors
-internal enum NetworkError: Error {
+internal enum NetworkError: Error, Equatable {
 
   /// Invalid HTTP Response.
   case invalidResponse(URLResponse?)
