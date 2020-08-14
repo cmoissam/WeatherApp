@@ -34,5 +34,107 @@ public enum getCityWeatherInformationsResult {
 /// Result of getAllCities service call
 public enum getAllCitiesResult {
     case failure(_ error: WeatherInfoServiceError)
-    case success(_ cities: CityData)
+    case success(_ cities: [CityData])
+}
+
+/// Service of weather information for given coordinates
+/// Data is collected from  Api: [https://api.openweathermap.org/data/2.5/onecall]
+public class WeatherInfoService {
+    private let cityDataManger: CityDataManger
+    private let cityApi: CityApi
+    
+    public init() {
+        self.cityDataManger = CityDataManger()
+        self.cityApi = CityApi()
+    }
+
+    // This is for Test purpose
+    internal init(
+        _ persistentContainer: NSPersistentContainer
+    ) {
+        self.cityDataManger = CityDataManger(persistentContainer)
+        self.cityApi = CityApi()
+    }
+    
+    /// createNewCity: create new City on DataBase
+    /// - Parameter name: name of city to create
+    /// - Parameter longitude: longitude coordinate of city to create
+    /// - Parameter latitude: latitude coordinate of city to create
+    /// - Parameter completion: The completion block that is executed when the service finishes.
+    ///
+    public func createNewCity(
+        name: String,
+        longitude: Double,
+        latitude: Double,
+        completion: @escaping (CreateNewCityResult) -> Void
+    ) {
+        do {
+            try cityDataManger.createCityData(name: name, longitude: longitude, latitude: latitude)
+            completion(.success)
+        } catch {
+            completion(.failure(.duplicatedName))
+        }
+    }
+
+    /// getCityWeatherInformations: get weather inbformations of city
+    /// Parameters :
+    /// - Parameter name: name of requested city infoirlmation
+    /// - Parameter completion: The completion block that is executed when the service finishes.
+    ///
+    public func getCityWeatherInformations(
+        name: String,
+        completion: @escaping (getCityWeatherInformationsResult) -> Void
+    ) {
+        do {
+            let savedCity = try cityDataManger.getCity(with: name)
+            guard let safeSavedCity = savedCity else {
+                completion(.failure(.inexistingName))
+                return
+            }
+            cityApi.getCityInformation(
+            longitude: safeSavedCity.longitude,
+            latitude: safeSavedCity.latitude
+            ) { city, error in
+                do {
+                    if let error = error {
+                        switch error {
+                        case .noNetwork, .requestTimedOut, .noDataReceived:
+                            print(error.localizedDescription)
+                        default:
+                            fatalError("Server request failed with Error\(error.localizedDescription)")
+                        }
+                    }
+                    if let safeCity = city {
+                        guard let newCity = try self.cityDataManger.updateCityData(name: name, city: safeCity)
+                            else {
+                                completion(.failure(.inexistingName))
+                                return
+                            }
+                        completion(.remote(newCity))
+                    } else {
+                        safeSavedCity.filled ? completion(.local(safeSavedCity)) : completion(.failure(.noData))
+                    }
+                } catch {
+                    completion(.failure(.inexistingName))
+                }
+            }
+        } catch {
+            completion(.failure(.inexistingName))
+        }
+    }
+
+    /// getAllCities: get all  cities stored in DataBase
+    /// - Parameter completion: The completion block that is executed when the service finishes.
+    ///
+    public func getAllCities(
+        completion: @escaping (getAllCitiesResult) -> Void
+    ) {
+        do {
+          let cities = try cityDataManger.getAllCities()
+            cities.isEmpty ? completion(.failure(.noData)) : completion(.success(cities))
+        } catch {
+            print(error)
+            completion(.failure(.noData))
+        }
+    }
 }
