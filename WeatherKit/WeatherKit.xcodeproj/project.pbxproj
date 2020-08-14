@@ -22,6 +22,8 @@
 		DA13E0A824E72643004A8111 /* CityApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E0A724E72643004A8111 /* CityApiTests.swift */; };
 		DA13E0AB24E72643004A8111 /* WeatherModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA13E0A924E72643004A8111 /* WeatherModel.xcdatamodeld */; };
 		DA13E0AE24E72643004A8111 /* WeatherDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E0AD24E72643004A8111 /* WeatherDataManager.swift */; };
+		DA13E0B024E73337004A8111 /* CityDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E0AF24E73337004A8111 /* CityDataManager.swift */; };
+		DA13E0B224E7337E004A8111 /* CityDataManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E0B124E7337E004A8111 /* CityDataManagerTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		DA13E0A724E72643004A8111 /* CityApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityApiTests.swift; sourceTree = "<group>"; };
 		DA13E0AA24E72643004A8111 /* WeatherModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WeatherModel.xcdatamodel; sourceTree = "<group>"; };
 		DA13E0AD24E72643004A8111 /* WeatherDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataManager.swift; sourceTree = "<group>"; };
+		DA13E0AF24E73337004A8111 /* CityDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDataManager.swift; sourceTree = "<group>"; };
+		DA13E0B124E7337E004A8111 /* CityDataManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDataManagerTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				DA13E0A724E72643004A8111 /* CityApiTests.swift */,
+				DA13E0B124E7337E004A8111 /* CityDataManagerTest.swift */,
 				DA13E09C24E72643004A8111 /* NetworkManagerTests.swift */,
 				DA13E07A24E72643004A8111 /* WeatherKitTests.swift */,
 				DA13E07C24E72643004A8111 /* Info.plist */,
@@ -142,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				DA13E0AD24E72643004A8111 /* WeatherDataManager.swift */,
+				DA13E0AF24E73337004A8111 /* CityDataManager.swift */,
 			);
 			path = dataManager;
 			sourceTree = "<group>";
@@ -265,6 +271,7 @@
 				DA13E0A224E72643004A8111 /* CityMapper.swift in Sources */,
 				DA13E0AB24E72643004A8111 /* WeatherModel.xcdatamodeld in Sources */,
 				DA13E09F24E72643004A8111 /* CityApi.swift in Sources */,
+				DA13E0B024E73337004A8111 /* CityDataManager.swift in Sources */,
 				DA13E09724E72643004A8111 /* NetworkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +282,7 @@
 			files = (
 				DA13E09D24E72643004A8111 /* NetworkManagerTests.swift in Sources */,
 				DA13E07B24E72643004A8111 /* WeatherKitTests.swift in Sources */,
+				DA13E0B224E7337E004A8111 /* CityDataManagerTest.swift in Sources */,
 				DA13E0A824E72643004A8111 /* CityApiTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
