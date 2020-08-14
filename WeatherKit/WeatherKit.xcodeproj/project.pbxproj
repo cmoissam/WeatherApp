@@ -20,6 +20,7 @@
 		DA13E0A424E72643004A8111 /* CurrentMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E0A324E72643004A8111 /* CurrentMapper.swift */; };
 		DA13E0A624E72643004A8111 /* WeatherMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E0A524E72643004A8111 /* WeatherMapper.swift */; };
 		DA13E0A824E72643004A8111 /* CityApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E0A724E72643004A8111 /* CityApiTests.swift */; };
+		DA13E0AB24E72643004A8111 /* WeatherModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DA13E0A924E72643004A8111 /* WeatherModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		DA13E0A324E72643004A8111 /* CurrentMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentMapper.swift; sourceTree = "<group>"; };
 		DA13E0A524E72643004A8111 /* WeatherMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherMapper.swift; sourceTree = "<group>"; };
 		DA13E0A724E72643004A8111 /* CityApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityApiTests.swift; sourceTree = "<group>"; };
+		DA13E0AA24E72643004A8111 /* WeatherModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WeatherModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 		DA13E06224E72643004A8111 = {
 			isa = PBXGroup;
 			children = (
+				DA13E0A924E72643004A8111 /* WeatherModel.xcdatamodeld */,
 				DA13E06E24E72643004A8111 /* WeatherKit */,
 				DA13E07924E72643004A8111 /* WeatherKitTests */,
 				DA13E06D24E72643004A8111 /* Products */,
@@ -248,6 +251,7 @@
 				DA13E0A624E72643004A8111 /* WeatherMapper.swift in Sources */,
 				DA13E0A424E72643004A8111 /* CurrentMapper.swift in Sources */,
 				DA13E0A224E72643004A8111 /* CityMapper.swift in Sources */,
+				DA13E0AB24E72643004A8111 /* WeatherModel.xcdatamodeld in Sources */,
 				DA13E09F24E72643004A8111 /* CityApi.swift in Sources */,
 				DA13E09724E72643004A8111 /* NetworkManager.swift in Sources */,
 			);
@@ -514,6 +518,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DA13E0A924E72643004A8111 /* WeatherModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DA13E0AA24E72643004A8111 /* WeatherModel.xcdatamodel */,
+			);
+			currentVersion = DA13E0AA24E72643004A8111 /* WeatherModel.xcdatamodel */;
+			path = WeatherModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DA13E06324E72643004A8111 /* Project object */;
 }
