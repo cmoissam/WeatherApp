@@ -24,6 +24,7 @@
 		DA13E0AE24E72643004A8111 /* WeatherDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E0AD24E72643004A8111 /* WeatherDataManager.swift */; };
 		DA13E0B024E73337004A8111 /* CityDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E0AF24E73337004A8111 /* CityDataManager.swift */; };
 		DA13E0B224E7337E004A8111 /* CityDataManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E0B124E7337E004A8111 /* CityDataManagerTest.swift */; };
+		DA13E0B524E734A8004A8111 /* WeatherInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E0B424E734A8004A8111 /* WeatherInfoService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		DA13E0AD24E72643004A8111 /* WeatherDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataManager.swift; sourceTree = "<group>"; };
 		DA13E0AF24E73337004A8111 /* CityDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDataManager.swift; sourceTree = "<group>"; };
 		DA13E0B124E7337E004A8111 /* CityDataManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDataManagerTest.swift; sourceTree = "<group>"; };
+		DA13E0B424E734A8004A8111 /* WeatherInfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInfoService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		DA13E06E24E72643004A8111 /* WeatherKit */ = {
 			isa = PBXGroup;
 			children = (
+				DA13E0B324E73488004A8111 /* service */,
 				DA13E0AC24E72643004A8111 /* dataManager */,
 				DA13E0A024E72643004A8111 /* mapper */,
 				DA13E09324E72643004A8111 /* api */,
@@ -150,6 +153,14 @@
 				DA13E0AF24E73337004A8111 /* CityDataManager.swift */,
 			);
 			path = dataManager;
+			sourceTree = "<group>";
+		};
+		DA13E0B324E73488004A8111 /* service */ = {
+			isa = PBXGroup;
+			children = (
+				DA13E0B424E734A8004A8111 /* WeatherInfoService.swift */,
+			);
+			path = service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +277,7 @@
 				DA13E09B24E72643004A8111 /* Resource.swift in Sources */,
 				DA13E09524E72643004A8111 /* HTTPMethod.swift in Sources */,
 				DA13E0A624E72643004A8111 /* WeatherMapper.swift in Sources */,
+				DA13E0B524E734A8004A8111 /* WeatherInfoService.swift in Sources */,
 				DA13E0AE24E72643004A8111 /* WeatherDataManager.swift in Sources */,
 				DA13E0A424E72643004A8111 /* CurrentMapper.swift in Sources */,
 				DA13E0A224E72643004A8111 /* CityMapper.swift in Sources */,
