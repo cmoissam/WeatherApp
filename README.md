@@ -10,7 +10,7 @@ Xcode 11 / iOS11 / Swift 5.0
 
 Clone project
 ```
-git clone (remote rerpo)
+git clone https://github.com/cmoissam/WeatherApp
 ```
 
 Run and Go !
@@ -19,7 +19,7 @@ Run and Go !
 
 ### Embdedded Frameworks
 
-[WeatherKit] (remote rerpo)
+[WeatherKit](https://github.com/cmoissam/WeatherApp/tree/master/WeatherKit)
 
 ### Architecture
 
