@@ -14,6 +14,10 @@ struct CityDataManger {
     fileprivate let entityName = "CityData"
     fileprivate let persistentContainer: NSPersistentContainer
 
+    enum PersistenceError: Error {
+        case duplicateName
+    }
+
     init(
         _ persistentContainer: NSPersistentContainer = WeatherDataManager.shared.persistentContainer
     ) {
@@ -48,6 +52,9 @@ struct CityDataManger {
         longitude: Double,
         latitude: Double
     ) throws {
+        guard try getCity(with: name) == nil else {
+            throw PersistenceError.duplicateName
+        }
         let context = persistentContainer.viewContext
         let cityStore = NSEntityDescription.insertNewObject(forEntityName: entityName, into: context) as! CityData
         

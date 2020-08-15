@@ -21,6 +21,7 @@ class WeatherDataManager {
         let modelURL = messageKitBundle!.url(forResource: self.model, withExtension: "momd")!
         let managedObjectModel =  NSManagedObjectModel(contentsOf: modelURL)
         let container = NSPersistentContainer(name: self.model, managedObjectModel: managedObjectModel!)
+        container.viewContext.mergePolicy = NSMergePolicy(merge: NSMergePolicyType.rollbackMergePolicyType)
         container.loadPersistentStores { (storeDescription, error) in
             if let err = error {
                 fatalError("Loading of store failed with error:\(err)")
