@@ -13,6 +13,18 @@
 		DA13E05824E72643004A8111 /* WeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E05724E72643004A8111 /* WeatherAppTests.swift */; };
 		DA13E09024E72643004A8111 /* WeatherKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA13E08C24E72643004A8111 /* WeatherKit.framework */; };
 		DA13E09124E72643004A8111 /* WeatherKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA13E08C24E72643004A8111 /* WeatherKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DA13E0BD24E7DEA8004A8111 /* CitiesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E0BB24E7DEA8004A8111 /* CitiesListViewController.swift */; };
+		DA13E0BE24E7DEA8004A8111 /* CitiesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA13E0BC24E7DEA8004A8111 /* CitiesListViewController.xib */; };
+		DA13E0C024E7DEEA004A8111 /* CitiesListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E0BF24E7DEEA004A8111 /* CitiesListInteractor.swift */; };
+		DA13E0C224E7DF09004A8111 /* CitiesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E0C124E7DF09004A8111 /* CitiesListViewModel.swift */; };
+		DA13E0C624E7DF61004A8111 /* CityDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E0C424E7DF61004A8111 /* CityDetailsViewController.swift */; };
+		DA13E0C724E7DF61004A8111 /* CityDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA13E0C524E7DF61004A8111 /* CityDetailsViewController.xib */; };
+		DA13E0C924E7DF73004A8111 /* CityDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E0C824E7DF73004A8111 /* CityDetailsInteractor.swift */; };
+		DA13E0CB24E7DF83004A8111 /* CityDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E0CA24E7DF83004A8111 /* CityDetailsViewModel.swift */; };
+		DA13E0CF24E7DFA4004A8111 /* AddCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E0CD24E7DFA4004A8111 /* AddCityViewController.swift */; };
+		DA13E0D024E7DFA4004A8111 /* AddCityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA13E0CE24E7DFA4004A8111 /* AddCityViewController.xib */; };
+		DA13E0D224E7DFC1004A8111 /* AddCityInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E0D124E7DFC1004A8111 /* AddCityInteractor.swift */; };
+		DA13E0D424E7DFCF004A8111 /* AddCityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E0D324E7DFCF004A8111 /* AddCityViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +75,18 @@
 		DA13E05724E72643004A8111 /* WeatherAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppTests.swift; sourceTree = "<group>"; };
 		DA13E05924E72643004A8111 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA13E08624E72643004A8111 /* WeatherKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WeatherKit.xcodeproj; path = WeatherKit/WeatherKit.xcodeproj; sourceTree = "<group>"; };
+		DA13E0BB24E7DEA8004A8111 /* CitiesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesListViewController.swift; sourceTree = "<group>"; };
+		DA13E0BC24E7DEA8004A8111 /* CitiesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CitiesListViewController.xib; sourceTree = "<group>"; };
+		DA13E0BF24E7DEEA004A8111 /* CitiesListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesListInteractor.swift; sourceTree = "<group>"; };
+		DA13E0C124E7DF09004A8111 /* CitiesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesListViewModel.swift; sourceTree = "<group>"; };
+		DA13E0C424E7DF61004A8111 /* CityDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailsViewController.swift; sourceTree = "<group>"; };
+		DA13E0C524E7DF61004A8111 /* CityDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CityDetailsViewController.xib; sourceTree = "<group>"; };
+		DA13E0C824E7DF73004A8111 /* CityDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailsInteractor.swift; sourceTree = "<group>"; };
+		DA13E0CA24E7DF83004A8111 /* CityDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailsViewModel.swift; sourceTree = "<group>"; };
+		DA13E0CD24E7DFA4004A8111 /* AddCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityViewController.swift; sourceTree = "<group>"; };
+		DA13E0CE24E7DFA4004A8111 /* AddCityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddCityViewController.xib; sourceTree = "<group>"; };
+		DA13E0D124E7DFC1004A8111 /* AddCityInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityInteractor.swift; sourceTree = "<group>"; };
+		DA13E0D324E7DFCF004A8111 /* AddCityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +131,7 @@
 		DA13E03F24E72643004A8111 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				DA13E0B924E7DE60004A8111 /* scenes */,
 				DA13E04024E72643004A8111 /* AppDelegate.swift */,
 				DA13E04924E72643004A8111 /* Assets.xcassets */,
 				DA13E04B24E72643004A8111 /* LaunchScreen.storyboard */,
@@ -138,6 +163,49 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA13E0B924E7DE60004A8111 /* scenes */ = {
+			isa = PBXGroup;
+			children = (
+				DA13E0CC24E7DF89004A8111 /* addCity */,
+				DA13E0C324E7DF2C004A8111 /* cityDetails */,
+				DA13E0BA24E7DE6A004A8111 /* citiesList */,
+			);
+			path = scenes;
+			sourceTree = "<group>";
+		};
+		DA13E0BA24E7DE6A004A8111 /* citiesList */ = {
+			isa = PBXGroup;
+			children = (
+				DA13E0BB24E7DEA8004A8111 /* CitiesListViewController.swift */,
+				DA13E0BC24E7DEA8004A8111 /* CitiesListViewController.xib */,
+				DA13E0BF24E7DEEA004A8111 /* CitiesListInteractor.swift */,
+				DA13E0C124E7DF09004A8111 /* CitiesListViewModel.swift */,
+			);
+			path = citiesList;
+			sourceTree = "<group>";
+		};
+		DA13E0C324E7DF2C004A8111 /* cityDetails */ = {
+			isa = PBXGroup;
+			children = (
+				DA13E0C424E7DF61004A8111 /* CityDetailsViewController.swift */,
+				DA13E0C524E7DF61004A8111 /* CityDetailsViewController.xib */,
+				DA13E0C824E7DF73004A8111 /* CityDetailsInteractor.swift */,
+				DA13E0CA24E7DF83004A8111 /* CityDetailsViewModel.swift */,
+			);
+			path = cityDetails;
+			sourceTree = "<group>";
+		};
+		DA13E0CC24E7DF89004A8111 /* addCity */ = {
+			isa = PBXGroup;
+			children = (
+				DA13E0CD24E7DFA4004A8111 /* AddCityViewController.swift */,
+				DA13E0CE24E7DFA4004A8111 /* AddCityViewController.xib */,
+				DA13E0D124E7DFC1004A8111 /* AddCityInteractor.swift */,
+				DA13E0D324E7DFCF004A8111 /* AddCityViewModel.swift */,
+			);
+			path = addCity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,8 +313,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA13E0D024E7DFA4004A8111 /* AddCityViewController.xib in Resources */,
+				DA13E0C724E7DF61004A8111 /* CityDetailsViewController.xib in Resources */,
 				DA13E04D24E72643004A8111 /* LaunchScreen.storyboard in Resources */,
 				DA13E04A24E72643004A8111 /* Assets.xcassets in Resources */,
+				DA13E0BE24E7DEA8004A8111 /* CitiesListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +335,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA13E0C924E7DF73004A8111 /* CityDetailsInteractor.swift in Sources */,
+				DA13E0D224E7DFC1004A8111 /* AddCityInteractor.swift in Sources */,
+				DA13E0CB24E7DF83004A8111 /* CityDetailsViewModel.swift in Sources */,
+				DA13E0C024E7DEEA004A8111 /* CitiesListInteractor.swift in Sources */,
+				DA13E0C224E7DF09004A8111 /* CitiesListViewModel.swift in Sources */,
+				DA13E0D424E7DFCF004A8111 /* AddCityViewModel.swift in Sources */,
+				DA13E0C624E7DF61004A8111 /* CityDetailsViewController.swift in Sources */,
 				DA13E04124E72643004A8111 /* AppDelegate.swift in Sources */,
+				DA13E0BD24E7DEA8004A8111 /* CitiesListViewController.swift in Sources */,
+				DA13E0CF24E7DFA4004A8111 /* AddCityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
