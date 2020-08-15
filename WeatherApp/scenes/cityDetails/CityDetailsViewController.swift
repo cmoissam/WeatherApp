@@ -28,21 +28,89 @@ class CityDetailsViewController: UIViewController {
     @IBOutlet private weak var contentScrollView: UIScrollView!
     @IBOutlet private weak var noDataLabel: UILabel!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+    // MARK :- Properties
+    private let interactor: CityWeatherDetailsUseCase
+    
+    // MARK: - Initializers
+    init(interactor: CityWeatherDetailsUseCase) {
+        self.interactor = interactor
+        super.init(nibName: nil, bundle: nil)
     }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    // MARK: - LifeCycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setUpObservers()
+    }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        interactor.getCityWeatherDetails()
+    }
+    
+    // MARK :- Private Methodes
+    private func setUpObservers() {
+        interactor.viewModel.addObserver(fireNow: true) { [weak self] displayContext in
+            self?.updateDisplay(displayContext: displayContext)
+        }
+    }
+    
+    private func updateDisplay(displayContext: CityDetailsDisplayContext) {
+        switch displayContext {
+        case .loading(let name):
+            title = name
+            contentScrollView.isHidden = true
+        case .noData:
+            noDataLabel.text = Constants.CityWeatherDetailsViewController.noData
+        case .success(let viewModel):
+            refreshUI(viewModel: viewModel)
+        }
+    }
+    
+    private func refreshUI(viewModel: CityDetailsViewModel) {
+        showProvenanceViewWithAnimation(isRemote: viewModel.isRemote)
+        contentScrollView.isHidden = false
+        latitudeLabel.text = viewModel.latitude
+        longitudeLabel.text = viewModel.longitude
+        timeZoneLabel.text = viewModel.timeZone
+        currentTimeLabel.text = viewModel.currentTime
+        temperatureLabel.text = viewModel.temperature
+        feelsLikeLabel.text = viewModel.feelsLike
+        pressureLabel.text = viewModel.pressure
+        humidityLabel.text = viewModel.humidity
+        windSpeedLabel.text = viewModel.windSpeed
+        windDegreeLabel.text = viewModel.windDegree
+        weatherMainLabel.text = viewModel.weatherMain
+        weatherDescriptionLabel.text = viewModel.weatherDescription
+        weatherIconLabel.image = viewModel.weatherIcon
+    }
+    
+    private func showProvenanceViewWithAnimation(isRemote: Bool) {
+        dataProvenanceLabel.backgroundColor = isRemote ? .green : .red
+        dataProvenanceLabel.text = isRemote ? Constants.CityWeatherDetailsViewController.remoteData : Constants.CityWeatherDetailsViewController.localData
+        UIView.animate(
+            withDuration: 0.300,
+            delay: 0.0,
+            options: [.curveEaseInOut],
+            animations: { [weak self] in
+                self?.dataProvenanceLabel.isHidden = false
+            },
+            completion: { [weak self] _ in
+                /// Using dispatch instead of animation delay property to keep user interaction when view is shown
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                    UIView.animate(
+                        withDuration: 0.300,
+                        animations: { [weak self] in
+                            self?.dataProvenanceLabel.isHidden = true
+                        },
+                        completion: nil
+                    )
+                }
+            }
+        )
+    }
 }

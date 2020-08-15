@@ -30,4 +30,11 @@ enum Constants {
         static let valitionErrorMessage = "The fields entered are incorrect, the name must not be empty, and the latitude and longitude must have correct values"
         static let saveErrorMessage = "The name of the city already exist"
     }
+    
+    enum CityWeatherDetailsViewController {
+        static let remoteData = "Data syncronized"
+        static let localData = "Data not syncronized"
+        static let noData = "Error: No Data Loaded"
+        static let loadingDate = "Loading..."
+    }
 }
