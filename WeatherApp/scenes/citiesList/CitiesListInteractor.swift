@@ -7,3 +7,28 @@
 //
 
 import Foundation
+import WeatherKit
+
+class CitiesListInteractor: CitiesListUseCase {
+    
+    var viewModel: Observable<CitiesListViewModel> = Observable(value: CitiesListViewModel())
+    private let weatherInfoService: WeatherInfoService
+    
+    internal init(weatherInfoService: WeatherInfoService) {
+        self.weatherInfoService = weatherInfoService
+    }
+    
+    func getCitiesName() {
+        weatherInfoService.getAllCities() { [weak self] result in
+            switch result {
+            case .success(let datas):
+                let citiesName: [String] = datas.compactMap {
+                    $0.name
+                }
+                self?.viewModel.value = CitiesListViewModel(citiesName: citiesName, status: .success)
+            case .failure(_):
+                self?.viewModel.value = CitiesListViewModel(status: .noData)
+            }
+        }
+    }
+}

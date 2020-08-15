@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CitiesListViewController" customModule="WeatherApp" customModuleProvider="target">
             <connections>
+                <outlet property="noDataLabel" destination="h83-Xc-uOH" id="TgW-Ke-qIb"/>
+                <outlet property="tableView" destination="tAh-9f-hFT" id="NWE-NN-UJJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
