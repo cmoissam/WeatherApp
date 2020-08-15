@@ -27,14 +27,14 @@ public enum CreateNewCityResult {
 public enum getCityWeatherInformationsResult {
     case failure(_ error: WeatherInfoServiceError)
     /// Data is not synchronised with Api
-    case local(_ city: CityData)
+    case local(_ city: City)
     /// Data is  synchronised with Api
-    case remote(_ city: CityData)
+    case remote(_ city: City)
 }
 /// Result of getAllCities service call
 public enum getAllCitiesResult {
     case failure(_ error: WeatherInfoServiceError)
-    case success(_ cities: [CityData])
+    case success(_ cities: [City])
 }
 
 /// Service of weather information for given coordinates
@@ -110,9 +110,9 @@ public class WeatherInfoService {
                                 completion(.failure(.inexistingName))
                                 return
                             }
-                        completion(.remote(newCity))
+                        completion(.remote(City(cityData: newCity)))
                     } else {
-                        safeSavedCity.filled ? completion(.local(safeSavedCity)) : completion(.failure(.noData))
+                        safeSavedCity.filled ? completion(.local(City(cityData: safeSavedCity))) : completion(.failure(.noData))
                     }
                 } catch {
                     completion(.failure(.inexistingName))
@@ -130,7 +130,7 @@ public class WeatherInfoService {
         completion: @escaping (getAllCitiesResult) -> Void
     ) {
         do {
-          let cities = try cityDataManger.getAllCities()
+            let cities = try cityDataManger.getAllCities().map({ City(cityData: $0) })
             cities.isEmpty ? completion(.failure(.noData)) : completion(.success(cities))
         } catch {
             print(error)

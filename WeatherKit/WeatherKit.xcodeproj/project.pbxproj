@@ -25,6 +25,7 @@
 		DA13E0B024E73337004A8111 /* CityDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E0AF24E73337004A8111 /* CityDataManager.swift */; };
 		DA13E0B224E7337E004A8111 /* CityDataManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E0B124E7337E004A8111 /* CityDataManagerTest.swift */; };
 		DA13E0B524E734A8004A8111 /* WeatherInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E0B424E734A8004A8111 /* WeatherInfoService.swift */; };
+		DA13E0B824E7DBEA004A8111 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E0B724E7DBEA004A8111 /* City.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		DA13E0AF24E73337004A8111 /* CityDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDataManager.swift; sourceTree = "<group>"; };
 		DA13E0B124E7337E004A8111 /* CityDataManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDataManagerTest.swift; sourceTree = "<group>"; };
 		DA13E0B424E734A8004A8111 /* WeatherInfoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInfoService.swift; sourceTree = "<group>"; };
+		DA13E0B724E7DBEA004A8111 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		DA13E06E24E72643004A8111 /* WeatherKit */ = {
 			isa = PBXGroup;
 			children = (
+				DA13E0B624E7DBDD004A8111 /* model */,
 				DA13E0B324E73488004A8111 /* service */,
 				DA13E0AC24E72643004A8111 /* dataManager */,
 				DA13E0A024E72643004A8111 /* mapper */,
@@ -161,6 +164,14 @@
 				DA13E0B424E734A8004A8111 /* WeatherInfoService.swift */,
 			);
 			path = service;
+			sourceTree = "<group>";
+		};
+		DA13E0B624E7DBDD004A8111 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				DA13E0B724E7DBEA004A8111 /* City.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +295,7 @@
 				DA13E0AB24E72643004A8111 /* WeatherModel.xcdatamodeld in Sources */,
 				DA13E09F24E72643004A8111 /* CityApi.swift in Sources */,
 				DA13E0B024E73337004A8111 /* CityDataManager.swift in Sources */,
+				DA13E0B824E7DBEA004A8111 /* City.swift in Sources */,
 				DA13E09724E72643004A8111 /* NetworkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
