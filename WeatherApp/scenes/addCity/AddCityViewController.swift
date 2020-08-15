@@ -47,7 +47,7 @@ class AddCityViewController: UIViewController {
     
     @objc func saveTapped() {
         guard let viewModel = AddCityViewModel(name: nameTextField.text, longitude: longitudeTextField.text, latitude: latitudeTextField.text) else {
-            print("Bad Args")
+            showErrorAlertController(title: Constants.AlertController.valitionErrorTitle, message: Constants.AlertController.valitionErrorMessage)
             return
         }
         interactor.AddNewCity(name: viewModel.name, longitude: viewModel.longitude, latitude: viewModel.latitude)
@@ -64,7 +64,7 @@ class AddCityViewController: UIViewController {
         case .success:
             navigationController?.popViewController(animated: true)
         case .error:
-            print("Cannot save City")
+            showErrorAlertController(title: Constants.AlertController.saveError, message: Constants.AlertController.saveErrorMessage)
         }
     }
 }

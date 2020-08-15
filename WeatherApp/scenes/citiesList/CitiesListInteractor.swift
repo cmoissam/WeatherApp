@@ -21,8 +21,8 @@ class CitiesListInteractor: CitiesListUseCase {
     func getCitiesName() {
         weatherInfoService.getAllCities() { [weak self] result in
             switch result {
-            case .success(let datas):
-                let citiesName: [String] = datas.compactMap {
+            case .success(let data):
+                let citiesName: [String] = data.compactMap {
                     $0.name
                 }
                 self?.viewModel.value = CitiesListViewModel(citiesName: citiesName, status: .success)
