@@ -28,6 +28,7 @@
 		DA13E0D724E7E21E004A8111 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E0D624E7E21E004A8111 /* Observable.swift */; };
 		DA13E0D924E7E27E004A8111 /* ObservableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E0D824E7E27E004A8111 /* ObservableTests.swift */; };
 		DA2F4A9E24E7EFBC0056A188 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2F4A9D24E7EFBC0056A188 /* Constants.swift */; };
+		DAC3D44524E7FA9600E7D0F6 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC3D44424E7FA9600E7D0F6 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		DA13E0D624E7E21E004A8111 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		DA13E0D824E7E27E004A8111 /* ObservableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableTests.swift; sourceTree = "<group>"; };
 		DA2F4A9D24E7EFBC0056A188 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DAC3D44424E7FA9600E7D0F6 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 		DA13E03F24E72643004A8111 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				DAC3D44124E7FA8800E7D0F6 /* common */,
 				DA13E0D524E7E208004A8111 /* utils */,
 				DA13E0B924E7DE60004A8111 /* scenes */,
 				DA13E04024E72643004A8111 /* AppDelegate.swift */,
@@ -223,6 +226,14 @@
 				DA2F4A9D24E7EFBC0056A188 /* Constants.swift */,
 			);
 			path = utils;
+			sourceTree = "<group>";
+		};
+		DAC3D44124E7FA8800E7D0F6 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				DAC3D44424E7FA9600E7D0F6 /* AppCoordinator.swift */,
+			);
+			path = common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,6 +373,7 @@
 				DA13E0C624E7DF61004A8111 /* CityDetailsViewController.swift in Sources */,
 				DA13E04124E72643004A8111 /* AppDelegate.swift in Sources */,
 				DA13E0BD24E7DEA8004A8111 /* CitiesListViewController.swift in Sources */,
+				DAC3D44524E7FA9600E7D0F6 /* AppCoordinator.swift in Sources */,
 				DA13E0CF24E7DFA4004A8111 /* AddCityViewController.swift in Sources */,
 				DA2F4A9E24E7EFBC0056A188 /* Constants.swift in Sources */,
 			);

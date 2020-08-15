@@ -17,22 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        let navigationController = AppNavigationController(rootViewController: CitiesListViewController(interactor: CitiesListInteractor(weatherInfoService: WeatherInfoService())))
-        window?.rootViewController = navigationController
+        window?.rootViewController = AppCoordinator().rootViewController
         window?.makeKeyAndVisible()
         return true
     }
 }
-
-class AppNavigationController: UINavigationController {
-  
-  // MARK :- LifeCycle
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    navigationBar.tintColor = .white
-    navigationBar.barStyle = .black
-    navigationBar.backgroundColor = .systemBlue
-  }
-}
-
