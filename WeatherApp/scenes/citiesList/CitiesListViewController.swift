@@ -71,6 +71,7 @@ extension CitiesListViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        coordinator.showCityWeatherDetailViewController(cityName: interactor.viewModel.value.citiesName[indexPath.row])
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

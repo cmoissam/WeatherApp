@@ -12,6 +12,7 @@ import WeatherKit
 protocol SharedRootContainer: class {
     func makeCitiesListViewController(coordinator: AppRoutingLogic) -> CitiesListViewController
     func makeAddCityViewController() -> AddCityViewController
+    func makeCityWeatherDetailsViewController(cityName: String) -> CityDetailsViewController
 }
 
 class SharedAppDependencies: SharedRootContainer {
@@ -20,6 +21,10 @@ class SharedAppDependencies: SharedRootContainer {
     
     func makeAddCityViewController() -> AddCityViewController {
         return AddCityViewController(interactor: AddCityInteractor(weatherInfoService: weatherInfoService))
+    }
+    
+    func makeCityWeatherDetailsViewController(cityName: String) -> CityDetailsViewController {
+        return CityDetailsViewController(interactor: CityWeatherDetailInteractor(weatherInfoService: weatherInfoService, cityName: cityName))
     }
     
     func makeCitiesListViewController(coordinator: AppRoutingLogic) -> CitiesListViewController {

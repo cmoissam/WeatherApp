@@ -11,6 +11,7 @@ import UIKit
 import WeatherKit
 protocol AppRoutingLogic: class {
     func showAddCityViewController()
+    func showCityWeatherDetailViewController(cityName: String)
 }
 
 class AppCoordinator: AppRoutingLogic {
@@ -24,6 +25,11 @@ class AppCoordinator: AppRoutingLogic {
     }
     func showAddCityViewController() {
         let vc = appDependencies.makeAddCityViewController()
+        rootViewController.pushViewController(vc, animated: true)
+    }
+    
+    func showCityWeatherDetailViewController(cityName: String) {
+        let vc = appDependencies.makeCityWeatherDetailsViewController(cityName: cityName)
         rootViewController.pushViewController(vc, animated: true)
     }
 }
