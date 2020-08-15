@@ -25,6 +25,8 @@
 		DA13E0D024E7DFA4004A8111 /* AddCityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA13E0CE24E7DFA4004A8111 /* AddCityViewController.xib */; };
 		DA13E0D224E7DFC1004A8111 /* AddCityInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E0D124E7DFC1004A8111 /* AddCityInteractor.swift */; };
 		DA13E0D424E7DFCF004A8111 /* AddCityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E0D324E7DFCF004A8111 /* AddCityViewModel.swift */; };
+		DA13E0D724E7E21E004A8111 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E0D624E7E21E004A8111 /* Observable.swift */; };
+		DA13E0D924E7E27E004A8111 /* ObservableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E0D824E7E27E004A8111 /* ObservableTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		DA13E0CE24E7DFA4004A8111 /* AddCityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddCityViewController.xib; sourceTree = "<group>"; };
 		DA13E0D124E7DFC1004A8111 /* AddCityInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityInteractor.swift; sourceTree = "<group>"; };
 		DA13E0D324E7DFCF004A8111 /* AddCityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCityViewModel.swift; sourceTree = "<group>"; };
+		DA13E0D624E7E21E004A8111 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		DA13E0D824E7E27E004A8111 /* ObservableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,7 @@
 		DA13E03F24E72643004A8111 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				DA13E0D524E7E208004A8111 /* utils */,
 				DA13E0B924E7DE60004A8111 /* scenes */,
 				DA13E04024E72643004A8111 /* AppDelegate.swift */,
 				DA13E04924E72643004A8111 /* Assets.xcassets */,
@@ -145,6 +150,7 @@
 			children = (
 				DA13E05724E72643004A8111 /* WeatherAppTests.swift */,
 				DA13E05924E72643004A8111 /* Info.plist */,
+				DA13E0D824E7E27E004A8111 /* ObservableTests.swift */,
 			);
 			path = WeatherAppTests;
 			sourceTree = "<group>";
@@ -206,6 +212,14 @@
 				DA13E0D324E7DFCF004A8111 /* AddCityViewModel.swift */,
 			);
 			path = addCity;
+			sourceTree = "<group>";
+		};
+		DA13E0D524E7E208004A8111 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				DA13E0D624E7E21E004A8111 /* Observable.swift */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,6 +349,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA13E0D724E7E21E004A8111 /* Observable.swift in Sources */,
 				DA13E0C924E7DF73004A8111 /* CityDetailsInteractor.swift in Sources */,
 				DA13E0D224E7DFC1004A8111 /* AddCityInteractor.swift in Sources */,
 				DA13E0CB24E7DF83004A8111 /* CityDetailsViewModel.swift in Sources */,
@@ -352,6 +367,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA13E0D924E7E27E004A8111 /* ObservableTests.swift in Sources */,
 				DA13E05824E72643004A8111 /* WeatherAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
