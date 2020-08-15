@@ -31,6 +31,7 @@
 		DAC3D44524E7FA9600E7D0F6 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC3D44424E7FA9600E7D0F6 /* AppCoordinator.swift */; };
 		DAC3D44724E7FD4C00E7D0F6 /* SharedAppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC3D44624E7FD4C00E7D0F6 /* SharedAppDependencies.swift */; };
 		DAC3D44924E807A600E7D0F6 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC3D44824E807A600E7D0F6 /* UIViewController+Extensions.swift */; };
+		DAC3D44B24E8144700E7D0F6 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC3D44A24E8144700E7D0F6 /* Date+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		DAC3D44424E7FA9600E7D0F6 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		DAC3D44624E7FD4C00E7D0F6 /* SharedAppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedAppDependencies.swift; sourceTree = "<group>"; };
 		DAC3D44824E807A600E7D0F6 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		DAC3D44A24E8144700E7D0F6 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +231,7 @@
 				DA13E0D624E7E21E004A8111 /* Observable.swift */,
 				DA2F4A9D24E7EFBC0056A188 /* Constants.swift */,
 				DAC3D44824E807A600E7D0F6 /* UIViewController+Extensions.swift */,
+				DAC3D44A24E8144700E7D0F6 /* Date+Extensions.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				DA13E0D424E7DFCF004A8111 /* AddCityViewModel.swift in Sources */,
 				DAC3D44924E807A600E7D0F6 /* UIViewController+Extensions.swift in Sources */,
 				DA13E0C624E7DF61004A8111 /* CityDetailsViewController.swift in Sources */,
+				DAC3D44B24E8144700E7D0F6 /* Date+Extensions.swift in Sources */,
 				DA13E04124E72643004A8111 /* AppDelegate.swift in Sources */,
 				DA13E0BD24E7DEA8004A8111 /* CitiesListViewController.swift in Sources */,
 				DAC3D44524E7FA9600E7D0F6 /* AppCoordinator.swift in Sources */,
