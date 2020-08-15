@@ -32,6 +32,7 @@
 		DAC3D44724E7FD4C00E7D0F6 /* SharedAppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC3D44624E7FD4C00E7D0F6 /* SharedAppDependencies.swift */; };
 		DAC3D44924E807A600E7D0F6 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC3D44824E807A600E7D0F6 /* UIViewController+Extensions.swift */; };
 		DAC3D44B24E8144700E7D0F6 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC3D44A24E8144700E7D0F6 /* Date+Extensions.swift */; };
+		DAC3D44D24E819D000E7D0F6 /* DateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC3D44C24E819D000E7D0F6 /* DateExtensionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		DAC3D44624E7FD4C00E7D0F6 /* SharedAppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedAppDependencies.swift; sourceTree = "<group>"; };
 		DAC3D44824E807A600E7D0F6 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		DAC3D44A24E8144700E7D0F6 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		DAC3D44C24E819D000E7D0F6 /* DateExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,9 +161,10 @@
 		DA13E05624E72643004A8111 /* WeatherAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				DA13E0D824E7E27E004A8111 /* ObservableTests.swift */,
+				DAC3D44C24E819D000E7D0F6 /* DateExtensionTests.swift */,
 				DA13E05724E72643004A8111 /* WeatherAppTests.swift */,
 				DA13E05924E72643004A8111 /* Info.plist */,
-				DA13E0D824E7E27E004A8111 /* ObservableTests.swift */,
 			);
 			path = WeatherAppTests;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA13E0D924E7E27E004A8111 /* ObservableTests.swift in Sources */,
+				DAC3D44D24E819D000E7D0F6 /* DateExtensionTests.swift in Sources */,
 				DA13E05824E72643004A8111 /* WeatherAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
