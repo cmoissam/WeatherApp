@@ -16,11 +16,10 @@ protocol SharedRootContainer: class {
 
 class SharedAppDependencies: SharedRootContainer {
     
-    
     private let weatherInfoService = WeatherInfoService()
     
     func makeAddCityViewController() -> AddCityViewController {
-        AddCityViewController()
+        return AddCityViewController(interactor: AddCityInteractor(weatherInfoService: weatherInfoService))
     }
     
     func makeCitiesListViewController(coordinator: AppRoutingLogic) -> CitiesListViewController {
