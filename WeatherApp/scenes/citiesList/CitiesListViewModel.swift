@@ -7,3 +7,24 @@
 //
 
 import Foundation
+
+protocol CitiesListUseCase {
+  var viewModel: Observable<CitiesListViewModel> { get }
+  func getCitiesName()
+}
+
+class CitiesListViewModel {
+  enum CitiesDisplayContext {
+    case loading
+    case success
+    case noData
+  }
+  
+  let citiesName: [String]
+  let status: CitiesDisplayContext
+  
+  internal init(citiesName: [String] = [], status: CitiesListViewModel.CitiesDisplayContext = .loading) {
+    self.citiesName = citiesName
+    self.status = status
+  }
+}
