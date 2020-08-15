@@ -10,7 +10,6 @@
 		DA13E04124E72643004A8111 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E04024E72643004A8111 /* AppDelegate.swift */; };
 		DA13E04A24E72643004A8111 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA13E04924E72643004A8111 /* Assets.xcassets */; };
 		DA13E04D24E72643004A8111 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA13E04B24E72643004A8111 /* LaunchScreen.storyboard */; };
-		DA13E05824E72643004A8111 /* WeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E05724E72643004A8111 /* WeatherAppTests.swift */; };
 		DA13E09024E72643004A8111 /* WeatherKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA13E08C24E72643004A8111 /* WeatherKit.framework */; };
 		DA13E09124E72643004A8111 /* WeatherKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA13E08C24E72643004A8111 /* WeatherKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DA13E0BD24E7DEA8004A8111 /* CitiesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E0BB24E7DEA8004A8111 /* CitiesListViewController.swift */; };
@@ -81,7 +80,6 @@
 		DA13E04C24E72643004A8111 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA13E04E24E72643004A8111 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA13E05324E72643004A8111 /* WeatherAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA13E05724E72643004A8111 /* WeatherAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppTests.swift; sourceTree = "<group>"; };
 		DA13E05924E72643004A8111 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA13E08624E72643004A8111 /* WeatherKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WeatherKit.xcodeproj; path = WeatherKit/WeatherKit.xcodeproj; sourceTree = "<group>"; };
 		DA13E0BB24E7DEA8004A8111 /* CitiesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesListViewController.swift; sourceTree = "<group>"; };
@@ -166,7 +164,6 @@
 				DAC3D44E24E81A8800E7D0F6 /* AddCityViewModelTests.swift */,
 				DAC3D44C24E819D000E7D0F6 /* DateExtensionTests.swift */,
 				DA13E0D824E7E27E004A8111 /* ObservableTests.swift */,
-				DA13E05724E72643004A8111 /* WeatherAppTests.swift */,
 				DA13E05924E72643004A8111 /* Info.plist */,
 			);
 			path = WeatherAppTests;
@@ -403,7 +400,6 @@
 			files = (
 				DA13E0D924E7E27E004A8111 /* ObservableTests.swift in Sources */,
 				DAC3D44D24E819D000E7D0F6 /* DateExtensionTests.swift in Sources */,
-				DA13E05824E72643004A8111 /* WeatherAppTests.swift in Sources */,
 				DAC3D44F24E81A8800E7D0F6 /* AddCityViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
