@@ -94,7 +94,8 @@ extension CitiesListViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
     }
     
-    @objc func addTapped() {
+    @objc
+    func addTapped() {
         coordinator.showAddCityViewController()
     }
 }

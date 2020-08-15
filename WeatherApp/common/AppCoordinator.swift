@@ -23,17 +23,18 @@ class AppCoordinator: AppRoutingLogic {
         self.rootViewController.viewControllers = [appDependencies.makeCitiesListViewController(coordinator: self)]
     }
     func showAddCityViewController() {
+        let vc = appDependencies.makeAddCityViewController()
+        rootViewController.pushViewController(vc, animated: true)
     }
 }
 
 class AppNavigationController: UINavigationController {
-  
-  // MARK :- LifeCycle
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    navigationBar.tintColor = .white
-    navigationBar.barStyle = .black
-    navigationBar.backgroundColor = .systemBlue
-  }
+    
+    // MARK :- LifeCycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationBar.tintColor = .white
+        navigationBar.barStyle = .black
+        navigationBar.backgroundColor = .systemBlue
+    }
 }

@@ -9,14 +9,31 @@
 import UIKit
 
 class AddCityViewController: UIViewController {
+    
+    // MARK :- Outlets
+    @IBOutlet private weak var nameTextField: UITextField!
+    @IBOutlet private weak var longitudeTextField: UITextField!
+    @IBOutlet private weak var latitudeTextField: UITextField!
 
+    // MARK: - LifeCycle
     override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+      super.viewDidLoad()
+      setUpUI()
+    }
+    
+    // MARK :- Private Methodes
+    private func setUpUI() {
+      title = Constants.AddCityViewController.title
+      setUpAddButton()
     }
 
+    private func setUpAddButton() {
+       navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveTapped))
+     }
 
+    @objc func saveTapped() {
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -26,5 +43,4 @@ class AddCityViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

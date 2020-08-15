@@ -18,4 +18,8 @@ enum Constants {
       static let title = "Cities List"
       static let noData = "The Cities List is empty, click on '+' button to add city"
     }
+
+    enum AddCityViewController {
+      static let title = "Add City"
+    }
 }
