@@ -15,11 +15,16 @@ class CitiesListViewController: UIViewController {
     
     // MARK :- Properties
     private let interactor: CitiesListUseCase
+    private let coordinator: AppRoutingLogic
     private let rowHeight: CGFloat = 60.0
     // MARK: - Initializers
     
-    init(interactor: CitiesListUseCase) {
+    init(
+        interactor: CitiesListUseCase,
+        coordinator: AppRoutingLogic
+    ) {
         self.interactor = interactor
+        self.coordinator = coordinator
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -88,6 +93,8 @@ extension CitiesListViewController {
     private func setUpAddButton() {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
     }
-
-    @objc func addTapped() {}
+    
+    @objc func addTapped() {
+        coordinator.showAddCityViewController()
+    }
 }

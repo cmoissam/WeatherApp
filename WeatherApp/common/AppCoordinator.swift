@@ -16,11 +16,12 @@ protocol AppRoutingLogic: class {
 class AppCoordinator: AppRoutingLogic {
     
     let rootViewController = AppNavigationController()
+    let appDependencies: SharedRootContainer
     
-    init() {
-        self.rootViewController.viewControllers = [CitiesListViewController(interactor: CitiesListInteractor(weatherInfoService: WeatherInfoService()))]
+    init(appDependencies: SharedRootContainer) {
+        self.appDependencies = appDependencies
+        self.rootViewController.viewControllers = [appDependencies.makeCitiesListViewController(coordinator: self)]
     }
-    
     func showAddCityViewController() {
     }
 }

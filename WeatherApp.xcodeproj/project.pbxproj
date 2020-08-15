@@ -29,6 +29,7 @@
 		DA13E0D924E7E27E004A8111 /* ObservableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA13E0D824E7E27E004A8111 /* ObservableTests.swift */; };
 		DA2F4A9E24E7EFBC0056A188 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA2F4A9D24E7EFBC0056A188 /* Constants.swift */; };
 		DAC3D44524E7FA9600E7D0F6 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC3D44424E7FA9600E7D0F6 /* AppCoordinator.swift */; };
+		DAC3D44724E7FD4C00E7D0F6 /* SharedAppDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC3D44624E7FD4C00E7D0F6 /* SharedAppDependencies.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		DA13E0D824E7E27E004A8111 /* ObservableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableTests.swift; sourceTree = "<group>"; };
 		DA2F4A9D24E7EFBC0056A188 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DAC3D44424E7FA9600E7D0F6 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		DAC3D44624E7FD4C00E7D0F6 /* SharedAppDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedAppDependencies.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				DAC3D44424E7FA9600E7D0F6 /* AppCoordinator.swift */,
+				DAC3D44624E7FD4C00E7D0F6 /* SharedAppDependencies.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				DA13E04124E72643004A8111 /* AppDelegate.swift in Sources */,
 				DA13E0BD24E7DEA8004A8111 /* CitiesListViewController.swift in Sources */,
 				DAC3D44524E7FA9600E7D0F6 /* AppCoordinator.swift in Sources */,
+				DAC3D44724E7FD4C00E7D0F6 /* SharedAppDependencies.swift in Sources */,
 				DA13E0CF24E7DFA4004A8111 /* AddCityViewController.swift in Sources */,
 				DA2F4A9E24E7EFBC0056A188 /* Constants.swift in Sources */,
 			);
